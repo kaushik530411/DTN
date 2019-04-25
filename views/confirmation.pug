@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Confirmation</title>
+
+    <!-- Bootstrap core CSS -->
+    <!--<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+
+    <!-- Custom styles for this template -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/cart-item.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+  
+  <div class="shopping-cart">
+      ul
+        each item in cart 
+          <div class="product">
+            <div class="product-image">
+              img(src= item.Img)
+            </div>
+            <div class="product-details">
+              <div class="product-title">
+                div= item.Name
+              </div>
+              <p class="product-description">
+                p= item.Description
+              </p>
+            </div>
+            <div class="product-price">
+              div= item.Price
+            </div>
+            <div class="product-quantity">
+              div= item.Quantity
+            </div>
+            <div class="product_removal">
+              <form action="/confirmation" method= "post">
+                    Quantity
+                    <p>
+                    input(type="hidden",name="Img",value=item.Img)
+                    <p>
+                    
+                    input(
+                      class="card-title"
+                      type="hidden"
+                      name="item_name"
+                      value=item.Name
+                    )
+                    <p>
+                    input(type="hidden",name="price",value=item.Price)
+                    <p>
+                    input(type="hidden",name="description",value=item.Description) 
+                    <p>
+                    input(type="hidden",name="quantity",value=item.Quantity)
+                    <p>
+              </form> 
+            </div>
+            <div class="product-line-price">
+              div= item.Subtotal
+            </div>
+          </div>       
+</div>
+<body>
+     <p> Order has been placed </br>
+     <i> Thank You for choosing DTN 
+      <br><br>
+      <li class="tab active"><a href="/home"> Go to Home</a></li>
+</body>

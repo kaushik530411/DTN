@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <!-- <script language="JavaScript" type="text/javascript" src="vendor/jquery/jquery.js"></script>
+    <script language="JavaScript" type="text/javascript" src="vendor/jquery/jquery.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="vendor/jquery/jquery.slim.js"></script>
+    <script language="JavaScript" type="text/javascript" src="vendor/jquery/jquery.slim.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <script language="JavaScript" type="text/javascript" src="/vendor/signup.js"></script> -->
+
+
+    <title> MAIN </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/css/style.css" rel="stylesheet">
+
+  </head>
+<body>
+<div class="form">
+      
+      <ul class="tab-group">
+        <li class="tab active"><a href="#signup">Sign Up</a></li>
+        <li class="tab"><a href="/loginPage">Log In</a></li>
+      </ul>
+      
+      <div class="tab-content">
+        <div id="signup">   
+          <h1>Sign Up</h1>
+          
+          <form action="/signup" method="post">
+          
+          <div class="top-row">
+            <div class="field-wrap">
+              <input type="text" name="fname" placeholder="First Name" required autocomplete="off" />
+            </div>
+        
+            <div class="field-wrap">
+              <input type="text" name="lname" placeholder="Last Name" required autocomplete="off"/>
+            </div>
+          </div>
+
+          <div class="field-wrap">
+
+            <input type="email" name="email" placeholder="Email Adress *" required autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+            <input type="password" name="password1" placeholder="Set a Password 1" required autocomplete="off"/>
+          </div>
+
+          <div class="field-wrap">
+            <input type="password" name="password2" placeholder="Set a Password 2" required autocomplete="off"/>
+          </div>
+          
+          <button type="submit" class="button button-block"/>Get Started</button>
+          
+          </form>
+
+        </div>
+        
+        <div id="login">   
+          <h1>Login (Welcome Back)!</h1>
+          
+          <form action="/login" method="post">
+          
+            <div class="field-wrap">
+            <label>
+              Email Address<span class="req">*</span>
+            </label>
+            <input type="email" name="email" required autocomplete="off"/>
+          </div>
+          
+          <div class="field-wrap">
+            <label>
+              Password 1<span class="req">*</span>
+            </label>
+            <input type="password" name="password1" required autocomplete="off"/>
+          
+          </div>
+          <div class="field-wrap">
+            <label>
+              Password 2<span class="req">*</span>
+            </label>
+            <input type="password" name="password2" required autocomplete="off"/>
+          </div>
+          
+          <p class="forgot"><a href="#">Forgot Password?</a></p>
+          
+          <button class="button button-block"/>Log In</button>
+          
+          </form>
+
+        </div>
+        
+      </div><!-- tab-content -->
+
+      <!-- <button /> <a href ="loginPage">Login</a> -->
+
+</div> <!-- /form -->
+</body>

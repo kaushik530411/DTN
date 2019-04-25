@@ -1,0 +1,4 @@
+name|Cloth;Price|24.99|This is a Winterwear
+|Book;1;24.99|
+
+

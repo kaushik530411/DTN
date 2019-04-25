@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Cart</title>
+
+    <!-- Bootstrap core CSS -->
+    <!--<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+
+    <!-- Custom styles for this template -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/cart-item.css" rel="stylesheet">
+
+  </head>
+
+<h1>Cart</h1>
+
+<div class="shopping-cart">
+
+  <div class="column-labels">
+    <label class="product-image">Image</label>
+    <label class="product-details">Product</label>
+    <label class="product-price">Price</label>
+    <label class="product-quantity">Quantity</label>
+    <label class="product-removal">Remove</label>
+    <label class="product-line-price">Total</label>
+  </div>
+      ul
+        each item in message
+          <div class="product">
+            <div class="product-image">
+              img(src= item.Img)
+            </div>
+            <div class="product-details">
+              <div class="product-title">
+                div= item.Name
+              </div>
+              <p class="product-description">
+                p= item.Description
+              </p>
+            </div>
+            <div class="product-price">
+              div= item.Price
+            </div>
+            <div class="product-quantity">
+              div= item.Quantity
+            </div>
+            <div class="product_removal">
+              <form action="/remove" method= "post">
+                    Quantity
+                    <p>
+                    input(type="hidden",name="Img",value=item.Img)
+                    <p>
+                    
+                    input(
+                      class="card-title"
+                      type="hidden"
+                      name="item_name"
+                      value=item.Name
+                    )
+                    <p>
+                    input(type="hidden",name="price",value=item.Price)
+                    <p>
+                    input(type="hidden",name="description",value=item.Description) 
+                    <p>
+                    input(type="hidden",name="quantity",value=item.Quantity)
+                    <p>
+                    <input type="submit" class="btn btn-primary" value="Remove">
+              </form> 
+            </div>
+            <div class="product-line-price">
+              div= (item.Subtotal).toFixed(2)
+            </div>
+          </div>       
+</div>
+
+  <div class="totals">
+    <div class="totals-item">
+      <label>Subtotal</label>
+      <div class="totals-value" id="cart-subtotal">
+        div= total
+      </div>
+    </div>
+    <div class="totals-item">
+      <label>Tax (5%)</label>
+      <div class="totals-value" id="cart-tax">
+        div= (total*0.05).toFixed(2)
+      </div>
+    </div>
+    <div class="totals-item">
+      <label>Shipping</label>
+      <div class="totals-value" id="cart-shipping">15.00</div>
+    </div>
+    <div class="totals-item totals-item-total">
+      <label>Grand Total</label>
+      <div class="totals-value" id="cart-total">
+        div= (1.05*total+15.00).toFixed(2)
+      </div>
+    </div>
+  </div>
+      
+      <button class="checkout" onclick="location.href='/checkout'">Checkout</button>
+<body> 
+  <br>
+  <li class="tab active"><a href="/home"> Go to Home</a></li>
+</body>
